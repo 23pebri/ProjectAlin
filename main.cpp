@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
         cout << "===============================" << endl;
         cout << "     Sistem Persamaan Linier " << endl;
         cout << "===============================" << endl;
-        cout << "1. Persamaan Liner Satu Variabel" << endl;
+        cout << "1. Persamaan Liner Satu Variabel alin ke satu" << endl;
         cout << "2. Persamaan Liner Dua Variabel" << endl;
         cout << "3. Persamaan Liner Tiga Variabel" << endl;
         cout << "4. Keluar" << endl;
