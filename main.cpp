@@ -5,8 +5,21 @@ using namespace std;
 //dekarasi function
 void PersSatuVar() {
     //digarap pebri
-
+    int main(){
+    int ax,b,c,x,x1;
+    cout<<" menggunakan rumus ax + b = c"<<endl;
+    cout<<"masukkan nilai ax : ";
+    cin>>ax;
+    cout<<"masukkan nilai b : ";
+    cin>>b;
+    cout<<"masukkan nilai c : ";
+    cin>>c;
+    x1 = c - b;
+    x = x1 / ax;
+    cout<<"hasil dari X = "<<x<<endl;
+   }
 }
+
 void PersDuaVar() {
     //digarap alvi
     int x[3],y[3],z[3];
