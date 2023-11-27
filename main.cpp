@@ -3,15 +3,15 @@
 using namespace std;
 
 //dekarasi function
-int PersSatuVar() {
+void PersSatuVar() {
     //digarap pebri
 
 }
-int PersDuaVar() {
+void PersDuaVar() {
     //digarap alvi
     int x[3],y[3],z[3];
     float hz,hy,hx,hslx,hsly;
-    cout<<"Mencari Persamaan Linier\ndengan bentuk :\n";
+    cout<<"Mencari Persamaan Linier Dua Variabel\ndengan bentuk :\n";
     cout<<"x1 + y1 = z1\n";
     cout<<"x2 + y2 = z2\n";
     cout<<"========================\n";
@@ -58,18 +58,20 @@ int PersDuaVar() {
     
 }
 
-int PersTigaVar() {
+void PersTigaVar() {
     //digarap devi dan najwa
 }
 
 int main(int argc, char const *argv[])
-{
+{   
+    system("cls");
     //deklarasi variabel
     int pilihan;
     bool keluar = false;
-
+    string k = "";
     while (keluar == false)
     {
+        keluar = false;
         cout << "===============================" << endl;
         cout << "     Sistem Persamaan Linier " << endl;
         cout << "===============================" << endl;
@@ -83,10 +85,29 @@ int main(int argc, char const *argv[])
         switch (pilihan)
         {
         case 1:
+            system("cls");
             //PersSatuVar();
             break;
         case 2:
-            //PersDuaVar();
+            system("cls");
+            PersDuaVar();
+            while (true)
+            {
+                cout << "Apakah anda ingin keluar dari program (y/n): ";
+                cin >> k;
+                if (k == "y" || k == "Y") {
+                    keluar = true;
+                    break;
+                } else if (k == "n" || k == "N")
+                {
+                    system("cls");
+                    break;
+                } else {
+                    cout << "Jawaban tidak ada dalam opsi";
+                }
+                system("cls");
+                
+            }
             break;
         case 3:
             //PersTigaVar();
@@ -98,8 +119,10 @@ int main(int argc, char const *argv[])
             cout << "Pilihan tidak ditemukan ";
             break;
         }
+        system("cls");
     }
     system("cls");
+    cout << "<<<<<<<<<<<<<<<<<<<<<< Present by Kelompok 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
     return 0;
 }
 
