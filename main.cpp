@@ -4,10 +4,16 @@ using namespace std;
 
 //dekarasi function
 int PersSatuVar() {
-    cout << "Hello";
+    //digarap pebri
+
 }
-int PersDuaVar();
-int PersTigaVar();
+int PersDuaVar() {
+    //digarap alvi
+
+}
+int PersTigaVar() {
+    //digarap devi dan najwa
+}
 
 int main(int argc, char const *argv[])
 {
@@ -50,6 +56,4 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-int PersSatuVar () {
-    
-}
+
