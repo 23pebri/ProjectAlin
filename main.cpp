@@ -9,6 +9,32 @@ int PersSatuVar() {
 }
 int PersDuaVar() {
     //digarap alvi
+    //ax + by = c
+    //dx + ey = f
+    int x1,x2,y1,y2,a,b,c,d,e,f;
+    cout << "ax1 + by1 = c" << endl;
+    cout << "dx2 + ey1 = f" << endl;
+    cout << "masukan nilai dari x1 : ";
+    cin >> x1;
+    cout << "masukan nilai dari a : ";
+    cin >> a;
+    cout << "masukan nilai dari y1 : ";
+    cin >> y1;
+    cout << "masukan nilai dari b : ";
+    cin >> b;
+    cout << "masukan nilai dari c : ";
+    cin >> c;
+
+    cout << "masukan nilai dari x2 : ";
+    cin >> x2;
+    cout << "masukan nilai dari d : ";
+    cin >> d;
+    cout << "masukan nilai dari y2 : ";
+    cin >> y2;
+    cout << "masukan nilai dari e : ";
+    cin >> e;
+    cout << "masukan nilai dari f : ";
+    cin >> f;
 
 }
 int PersTigaVar() {
