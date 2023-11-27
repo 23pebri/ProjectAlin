@@ -3,7 +3,9 @@
 using namespace std;
 
 //dekarasi function
-int PersSatuVar();
+int PersSatuVar() {
+    
+}
 int PersDuaVar();
 int PersTigaVar();
 
