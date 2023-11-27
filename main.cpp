@@ -4,7 +4,7 @@ using namespace std;
 
 //dekarasi function
 int PersSatuVar() {
-    
+    cout << "Hello";
 }
 int PersDuaVar();
 int PersTigaVar();
