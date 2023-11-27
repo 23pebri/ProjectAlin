@@ -87,6 +87,22 @@ int main(int argc, char const *argv[])
         case 1:
             system("cls");
             //PersSatuVar();
+            while (true)
+            {
+                cout << "Apakah anda ingin keluar dari program (y/n): ";
+                cin >> k;
+                if (k == "y" || k == "Y") {
+                    keluar = true;
+                    break;
+                } else if (k == "n" || k == "N")
+                {
+                    system("cls");
+                    break;
+                } else {
+                    cout << "Jawaban tidak ada dalam opsi";
+                }
+                system("cls");
+            }
             break;
         case 2:
             system("cls");
@@ -106,11 +122,26 @@ int main(int argc, char const *argv[])
                     cout << "Jawaban tidak ada dalam opsi";
                 }
                 system("cls");
-                
             }
             break;
         case 3:
             //PersTigaVar();
+            while (true)
+            {
+                cout << "Apakah anda ingin keluar dari program (y/n): ";
+                cin >> k;
+                if (k == "y" || k == "Y") {
+                    keluar = true;
+                    break;
+                } else if (k == "n" || k == "N")
+                {
+                    system("cls");
+                    break;
+                } else {
+                    cout << "Jawaban tidak ada dalam opsi";
+                }
+                system("cls");
+            }
             break;
         case 4:
             keluar = true;
