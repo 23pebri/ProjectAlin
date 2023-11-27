@@ -39,7 +39,7 @@ void PersDuaVar() {
         int m,mx,my;
         float n,x1,y1,z1,x2,y2,z2;
         m= x[2] * x[1];
-        mx= m / x[1];
+        mx= m / x[1]; 
         my= m / x[2];
         y1= y[1] * mx;
         z1= z[1] * mx;
