@@ -4,21 +4,22 @@ using namespace std;
 
 //dekarasi function
 void PersSatuVar() {
-    //digarap pebri
-    int main(){
-    int ax,b,c,x,x1;
-    cout<<" menggunakan rumus ax + b = c"<<endl;
-    cout<<"masukkan nilai ax : ";
-    cin>>ax;
+        //digarap pebri
+    int a,b,c,x,x1;
+    cout<<"Mencari Persamaan Linier Satu Variabel\ndengan bentuk :\nax + b = c\n";
+    cout<<"masukkan nilai a : ";
+    cin>>a;
     cout<<"masukkan nilai b : ";
     cin>>b;
     cout<<"masukkan nilai c : ";
     cin>>c;
+    cout <<"Bentuk persamaan: "<<endl;
+    cout<<a<<"x + "<<b<<"= "<<c<<"\n";
     x1 = c - b;
-    x = x1 / ax;
+    x = x1 / a;
     cout<<"hasil dari X = "<<x<<endl;
-   }
 }
+
 
 void PersDuaVar() {
     //digarap alvi
@@ -85,12 +86,12 @@ int main(int argc, char const *argv[])
     while (keluar == false)
     {
         keluar = false;
-        cout << "===============================" << endl;
+        cout << "=================================" << endl;
         cout << "     Sistem Persamaan Linier " << endl;
-        cout << "===============================" << endl;
-        cout << "1. Persamaan Liner Satu Variabel alin ke satu" << endl;
+        cout << "=================================" << endl;
+        cout << "1. Persamaan Liner Satu Variabel" << endl;
         cout << "2. Persamaan Liner Dua Variabel" << endl;
-        cout << "3. Persamaan Liner Tiga Variabel oke" << endl;
+        cout << "3. Persamaan Liner Tiga Variabel" << endl;
         cout << "4. Keluar" << endl;
         cout << endl;
         cout << "Pilih Menu (1/2/3/4): ";
@@ -99,7 +100,7 @@ int main(int argc, char const *argv[])
         {
         case 1:
             system("cls");
-            //PersSatuVar();
+            PersSatuVar();
             while (true)
             {
                 cout << "Apakah anda ingin keluar dari program (y/n): ";
