@@ -7,6 +7,7 @@ void PersSatuVar() {
         //digarap pebri
     int a,b,c,x,x1;
     cout<<"Mencari Persamaan Linier Satu Variabel\ndengan bentuk :\nax + b = c\n";
+    cout<<"========================\n";
     cout<<"masukkan nilai a : ";
     cin>>a;
     cout<<"masukkan nilai b : ";
@@ -17,7 +18,11 @@ void PersSatuVar() {
     cout<<a<<"x + "<<b<<"= "<<c<<"\n";
     x1 = c - b;
     x = x1 / a;
-    cout<<"hasil dari X = "<<x<<endl;
+    cout<<"hasil dari variabel x adalah "<<x<<endl;
+    cout <<"Cek kebenaran: \n";
+    cout <<a<<"."<<"("<<x<<")"<<" + "<<b<<" = " << c << endl;
+    cout <<a*x <<" + " << b << " = " <<c << endl;
+    cout << a*x+b << " = " << c << " (Setara)\n";
 }
 
 
@@ -73,7 +78,100 @@ void PersDuaVar() {
 }
 
 void PersTigaVar() {
-    //digarap devi dan najwa
+    int matriks[3][4];
+    int D[3][5];
+    int X[3][5];
+    int Y[3][5];
+    int Z[3][5];
+    int Det,DetX,DetY,DetZ,x,y,z;
+    int a = 1;
+    cout << "Mencari Persamaan liner tiga variabel\n";
+    cout << "dengan bentuk : " <<endl;
+    cout << "a1x + a2y + a3z = a4\na5x + a6y + a7z =a8\na9x + a10y + a11z = a12\n";
+    cout<<"========================\n";
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            cout << "nilai koefisien a"<<a<<" : ";
+            cin >> matriks[i][j];
+            a++;
+        }
+        
+    }
+    //Det
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0;  j< 3; j++)
+        {
+            D[i][j] = matriks[i][j];
+        }
+    }
+    D[0][3] = D[0][0];
+    D[1][3] = D[1][0];
+    D[2][3] = D[2][0];
+    D[0][4] = D[0][1];
+    D[1][4] = D[1][1];
+    D[2][4] = D[2][1];
+    Det = D[0][0]*D[1][1]*D[2][2] + D[0][1]*D[1][2]*D[2][3] + D[0][2]*D[1][3]*D[2][4]- D[0][4]*D[1][3]*D[2][2] - D[0][3]*D[1][2]*D[2][1] - D[0][2]*D[1][1]*D[2][0]; 
+    //DetX
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0;  j< 3; j++)
+        {
+            X[i][j] = matriks[i][j];
+        }
+    }
+    X[0][0] = matriks[0][3];
+    X[1][0] = matriks[1][3];
+    X[2][0] = matriks[2][3];
+    X[0][3] = X[0][0];
+    X[1][3] = X[1][0];
+    X[2][3] = X[2][0];
+    X[0][4] = X[0][1];
+    X[1][4] = X[1][1];
+    X[2][4] = X[2][1];
+    DetX = X[0][0]*X[1][1]*X[2][2] + X[0][1]*X[1][2]*X[2][3] + X[0][2]*X[1][3]*X[2][4]- X[0][4]*X[1][3]*X[2][2] - X[0][3]*X[1][2]*X[2][1] - X[0][2]*X[1][1]*X[2][0];
+   //Det Y
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0;  j< 3; j++)
+        {
+            Y[i][j] = matriks[i][j];
+        }
+    }
+    Y[0][1] = matriks[0][3];
+    Y[1][1] = matriks[1][3];
+    Y[2][1] = matriks[2][3];
+    Y[0][3] = Y[0][0];
+    Y[1][3] = Y[1][0];
+    Y[2][3] = Y[2][0];
+    Y[0][4] = Y[0][1];
+    Y[1][4] = Y[1][1];
+    Y[2][4] = Y[2][1];
+    DetY = Y[0][0]*Y[1][1]*Y[2][2] + Y[0][1]*Y[1][2]*Y[2][3] + Y[0][2]*Y[1][3]*Y[2][4]- Y[0][4]*Y[1][3]*Y[2][2] - Y[0][3]*Y[1][2]*Y[2][1] - Y[0][2]*Y[1][1]*Y[2][0];
+   //Det Z
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0;  j< 3; j++)
+        {
+            Z[i][j] = matriks[i][j];
+        }
+    }
+    Z[0][2] = matriks[0][3];
+    Z[1][2] = matriks[1][3];
+    Z[2][2] = matriks[2][3];
+    Z[0][3] = Z[0][0];
+    Z[1][3] = Z[1][0];
+    Z[2][3] = Z[2][0];
+    Z[0][4] = Z[0][1];
+    Z[1][4] = Z[1][1];
+    Z[2][4] = Z[2][1];
+    DetZ = Z[0][0]*Z[1][1]*Z[2][2] + Z[0][1]*Z[1][2]*Z[2][3] + Z[0][2]*Z[1][3]*Z[2][4]- Z[0][4]*Z[1][3]*Z[2][2] - Z[0][3]*Z[1][2]*Z[2][1] - Z[0][2]*Z[1][1]*Z[2][0];
+    x = DetX/Det;
+    y = DetY/Det;
+    z = DetZ/Det;
+    cout << "Nilai x = " << x <<" \nNilai y = " << y <<" \nNilai z = " << z;
 }
 
 int main(int argc, char const *argv[])
@@ -167,7 +265,9 @@ int main(int argc, char const *argv[])
         system("cls");
     }
     system("cls");
-    cout << "<<<<<<<<<<<<<<<<<<<<<< Present by Kelompok 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
+    cout << "<<<<<<<<<<<<<<<<<<<<<< Present by Kelompok 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n";
+    cout << "Anggota:\n 1. Alvi\n 2. Pebri \n 3. Najwa \n 4. Devi\n";
+    cout << "   <<<<<<<<<<<<<<<<<<<<<< Thanks for All >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n";
     return 0;
 }
 
