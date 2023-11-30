@@ -28,53 +28,59 @@ void PersSatuVar() {
 
 void PersDuaVar() {
     //digarap alvi
-    int x[3],y[3],z[3];
-    float hz,hy,hx,hslx,hsly;
+    int matriks[2][3];
+    int D[2][2];
+    int X[2][2];
+    int Y[2][2];
+    int Det,Detx,Dety,x,y,a = 1;
     cout<<"Mencari Persamaan Linier Dua Variabel\ndengan bentuk :\n";
-    cout<<"x1 + y1 = z1\n";
-    cout<<"x2 + y2 = z2\n";
+    cout<<"a1x + a2y = a3\n";
+    cout<<"a4x + a5y = a6\n";
     cout<<"========================\n";
-    for(int i=1;i<3;i++)
+    for(int i= 0;i<2;i++)
     {
-        cout<<"Masukkan Nilai x"<<i<<" : ";cin>>x[i];
-        cout<<"Masukkan Nilai y"<<i<<" : ";cin>>y[i];
-        cout<<"Masukkan Nilai z"<<i<<" : ";cin>>z[i];
+        for (int j = 0; j < 3; j++)
+        {
+            cout << "masukan nilai a"<<a<<" : ";
+            cin >> matriks[i][j];
+            a++;
+        }
+        
     }
-    cout<<"\nSehingga menjadi :\n";
-    cout<<x[1]<<"x + "<<y[1]<<"y = "<<z[1]<<"\n";
-    cout<<x[2]<<"x + "<<y[2]<<"y = "<<z[2]<<"\n";
-    if(x[1] == x[2])
+    //Det
+    for (int i = 0; i < 2; i++)
     {
-        int m;
-        hy= y[1]-y[2];
-        hz= z[1]-z[2];
-        hsly= hz / hy;
-        m= hsly * y[1];
-        hx= z[1]- m;
-        hslx= hx / x[1];
+        for (int j = 0; j < 2; j++)
+        {
+            D[i][j] = matriks[i][j];
+        }
     }
-    else
+    Det = D[0][0]*D[1][1] - D[0][1]*D[1][0];
+    //DetX
+    for (int i = 0; i < 2; i++)
     {
-        int m,mx,my;
-        float n,x1,y1,z1,x2,y2,z2;
-        m= x[2] * x[1];
-        mx= m / x[1]; 
-        my= m / x[2];
-        y1= y[1] * mx;
-        z1= z[1] * mx;
-        y2= y[2] * my;
-        z2= z[2] * my;
-        hy= y1-y2;
-        hz= z1-z2;
-        hsly= hz / hy;
-        n= hsly * y[1];
-        hx = z[1] -  n;
-        hslx= hx / x[1];
+        for (int j = 0; j < 2; j++)
+        {
+            X[i][j] = matriks[i][j];
+        }
     }
-    cout<<"\nJawabannya adalah :\n";
-    cout<<"Nilai x = "<<hslx<<"\n";
-    cout<<"Nilai y = "<<hsly<<"\n";
-    
+    X[0][0] = matriks[0][2];
+    X[1][0] = matriks[1][2];
+    Detx = X[0][0]*X[1][1] - X[0][1]*X[1][0];
+    //DetY
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            Y[i][j] = matriks[i][j];
+        }
+    }
+    Y[0][1] = matriks[0][2];
+    Y[1][1] = matriks[1][2];
+    Dety = Y[0][0]*Y[1][1] - Y[0][1]*Y[1][0];
+    x = Detx/Det;
+    y = Dety/Det;
+    cout << "Nilai x adalah " << x << " dan " << " Nilai y adalah " << y;
 }
 
 void PersTigaVar() {
@@ -93,7 +99,7 @@ void PersTigaVar() {
     {
         for (int j = 0; j < 4; j++)
         {
-            cout << "nilai koefisien a"<<a<<" : ";
+            cout << "masukan nilai a"<<a<<" : ";
             cin >> matriks[i][j];
             a++;
         }
