@@ -4,7 +4,8 @@ using namespace std;
 
 //dekarasi function
 void PersSatuVar() {
-        //digarap pebri
+    //digarap pebri
+
     int a,b,c,x,x1;
     cout<<"Mencari Persamaan Linier Satu Variabel\ndengan bentuk :\nax + b = c\n";
     cout<<"========================\n";
@@ -14,15 +15,19 @@ void PersSatuVar() {
     cin>>b;
     cout<<"masukkan nilai c : ";
     cin>>c;
+    cout << endl;
     cout <<"Bentuk persamaan: "<<endl;
-    cout<<a<<"x + "<<b<<"= "<<c<<"\n";
+    cout<<a<<"x + "<<b<<" = "<<c<<"\n";
     x1 = c - b;
     x = x1 / a;
-    cout<<"hasil dari variabel x adalah "<<x<<endl;
+    cout << endl;
+    cout<<"Nilai dari variabel x adalah "<<x<<endl;
+    cout << endl;
     cout <<"Cek kebenaran: \n";
     cout <<a<<"."<<"("<<x<<")"<<" + "<<b<<" = " << c << endl;
     cout <<a*x <<" + " << b << " = " <<c << endl;
-    cout << a*x+b << " = " << c << " (Setara)\n";
+    cout << a*x+b << " = " << c << " ( setara )\n";
+    cout << endl;
 }
 
 
@@ -47,6 +52,10 @@ void PersDuaVar() {
         }
         
     }
+    cout << endl;
+    cout << "Bentuk persamaan: " << endl;
+    cout << matriks[0][0] <<"x + " << matriks[0][1] << "y = " << matriks[0][2] << endl;
+    cout << matriks[1][0] <<"x + " << matriks[1][1] << "y = " << matriks[1][2] << endl;
     //Det
     for (int i = 0; i < 2; i++)
     {
@@ -80,7 +89,15 @@ void PersDuaVar() {
     Dety = Y[0][0]*Y[1][1] - Y[0][1]*Y[1][0];
     x = Detx/Det;
     y = Dety/Det;
-    cout << "Nilai x adalah " << x << " dan " << " Nilai y adalah " << y;
+    cout << endl;
+    cout << "Nilai x adalah " << x << " dan \n" ;
+    cout << "Nilai y adalah " << y <<endl;
+    cout << endl;
+    cout << "Cek kebenaran: " << endl; 
+    cout << matriks[0][0] <<"(" << x << ") + " <<  matriks[0][1] << "(" << y << ") = " << matriks[0][2] << endl;
+    cout << matriks[0][0]*x << " + " <<  matriks[0][1]*y << " = "  << matriks[0][2] << endl;
+    cout << matriks[0][0]*x + matriks[0][1]*y << " = "  << matriks[0][2] << " ( setara )\n";
+    cout << endl;
 }
 
 void PersTigaVar() {
@@ -93,7 +110,7 @@ void PersTigaVar() {
     int a = 1;
     cout << "Mencari Persamaan liner tiga variabel\n";
     cout << "dengan bentuk : " <<endl;
-    cout << "a1x + a2y + a3z = a4\na5x + a6y + a7z =a8\na9x + a10y + a11z = a12\n";
+    cout << "a1x + a2y + a3z = a4\na5x + a6y + a7z = a8\na9x + a10y + a11z = a12\n";
     cout<<"========================\n";
     for (int i = 0; i < 3; i++)
     {
@@ -105,6 +122,11 @@ void PersTigaVar() {
         }
         
     }
+    cout << endl;
+    cout << "Bentuk persamaan: \n";
+    cout << matriks[0][0] <<"x + " << matriks[0][1] << "y + " <<matriks[0][2] <<"z = "<< matriks[0][3] << endl;
+    cout << matriks[1][0] <<"x + " << matriks[1][1] << "y + " <<matriks[1][2] <<"z = "<< matriks[1][3] << endl;
+    cout << matriks[2][0] <<"x + " << matriks[2][1] << "y + " <<matriks[2][2] <<"z = "<< matriks[2][3] << endl;
     //Det
     for (int i = 0; i < 3; i++)
     {
@@ -177,7 +199,14 @@ void PersTigaVar() {
     x = DetX/Det;
     y = DetY/Det;
     z = DetZ/Det;
-    cout << "Nilai x = " << x <<" \nNilai y = " << y <<" \nNilai z = " << z;
+    cout << endl;
+    cout << "Nilai dari variabel x adalah " << x <<"\nNilai dari variabel y adalah " << y <<" dan \nNilai dari variabel z adalah " << z << endl;
+    cout << endl;
+    cout << "Cek kebenaran: " << endl;
+    cout << matriks[0][0] <<"(" << x << ") + " <<  matriks[0][1] << "(" << y << ") + " << matriks[0][2] << "("<<z<<") = "<< matriks[0][3] << endl;
+    cout << matriks[0][0]*x << " + " <<  matriks[0][1]*y << " + "  << matriks[0][2]*z << " = "<< matriks[0][3] << endl;
+    cout << matriks[0][0]*x + matriks[0][1]*y + matriks[0][2]<< " = "  << matriks[0][3] << " ( setara )\n";
+    cout << endl;
 }
 
 int main(int argc, char const *argv[])
@@ -243,7 +272,8 @@ int main(int argc, char const *argv[])
             }
             break;
         case 3:
-            //PersTigaVar();
+            system("cls");
+            PersTigaVar();
             while (true)
             {
                 cout << "Apakah anda ingin keluar dari program (y/n): ";
@@ -273,7 +303,7 @@ int main(int argc, char const *argv[])
     system("cls");
     cout << "<<<<<<<<<<<<<<<<<<<<<< Present by Kelompok 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n";
     cout << "Anggota:\n 1. Alvi\n 2. Pebri \n 3. Najwa \n 4. Devi\n";
-    cout << "   <<<<<<<<<<<<<<<<<<<<<< Thanks for All >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n";
+    cout << "<<<<<<<<<<<<<<<<<<<<<< Thanks full for My Self >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n";
     return 0;
 }
 
