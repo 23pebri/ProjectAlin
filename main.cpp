@@ -5,7 +5,6 @@ using namespace std;
 //dekarasi function
 void PersSatuVar() {
     //digarap pebri
-
     int a,b,c,x,x1;
     cout<<"Mencari Persamaan Linier Satu Variabel\ndengan bentuk :\nax + b = c\n";
     cout<<"========================\n";
