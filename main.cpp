@@ -204,7 +204,7 @@ void PersTigaVar() {
     cout << "Cek kebenaran: " << endl;
     cout << matriks[0][0] <<"(" << x << ") + " <<  matriks[0][1] << "(" << y << ") + " << matriks[0][2] << "("<<z<<") = "<< matriks[0][3] << endl;
     cout << matriks[0][0]*x << " + " <<  matriks[0][1]*y << " + "  << matriks[0][2]*z << " = "<< matriks[0][3] << endl;
-    cout << matriks[0][0]*x + matriks[0][1]*y + matriks[0][2]<< " = "  << matriks[0][3] << " ( setara )\n";
+    cout << matriks[0][0]*x + matriks[0][1]*y + matriks[0][2]*z<< " = "  << matriks[0][3] << " ( setara )\n";
     cout << endl;
 }
 
@@ -302,7 +302,7 @@ int main(int argc, char const *argv[])
     system("cls");
     cout << "<<<<<<<<<<<<<<<<<<<<<< Present by Kelompok 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n";
     cout << "Anggota:\n 1. Alvi\n 2. Pebri \n 3. Najwa \n 4. Devi\n";
-    cout << "<<<<<<<<<<<<<<<<<<<<<< Thanks full for My Self >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n";
+    cout << "<<<<<<<<<<<<<<<<<<<<<< Thanks fully for My Self >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n";
     return 0;
 }
 
